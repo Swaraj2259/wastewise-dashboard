@@ -1,1 +1,109 @@
-<h1>WasteWise Waste Management Cloud</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WasteWise Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>♻️ WasteWise Operations Dashboard</h1>
+    <p>Waste Management & Recycling Operations</p>
+</header>
+
+<div class="container">
+
+    <div class="cards">
+        <div class="card">
+            <h3>Total Waste Collected</h3>
+            <h2>12,540 KG</h2>
+        </div>
+
+        <div class="card">
+            <h3>Active Vehicles</h3>
+            <h2>18</h2>
+        </div>
+
+        <div class="card">
+            <h3>Regions Covered</h3>
+            <h2>6</h2>
+        </div>
+
+        <div class="card">
+            <h3>Today's Collections</h3>
+            <h2>124</h2>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <h2>Waste Collection Analytics</h2>
+        <canvas id="wasteChart"></canvas>
+    </div>
+
+    <div class="tables">
+
+        <div class="table-box">
+            <h2>Vehicle Status</h2>
+            <table>
+                <tr>
+                    <th>Vehicle ID</th>
+                    <th>Region</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>TRK-101</td>
+                    <td>North</td>
+                    <td>Active</td>
+                </tr>
+                <tr>
+                    <td>TRK-102</td>
+                    <td>East</td>
+                    <td>Active</td>
+                </tr>
+                <tr>
+                    <td>TRK-103</td>
+                    <td>West</td>
+                    <td>Maintenance</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="table-box">
+            <h2>AWS Infrastructure Status</h2>
+            <table>
+                <tr>
+                    <th>Service</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>EC2 Instance</td>
+                    <td>🟢 Running</td>
+                </tr>
+                <tr>
+                    <td>Docker</td>
+                    <td>🟢 Active</td>
+                </tr>
+                <tr>
+                    <td>RDS MySQL</td>
+                    <td>🟢 Connected</td>
+                </tr>
+                <tr>
+                    <td>CloudWatch</td>
+                    <td>🟢 Monitoring</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
