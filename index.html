@@ -1,105 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WasteWise Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WasteWise Dashboard</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
-<header>
-    <h1>♻️ WasteWise Operations Dashboard</h1>
-    <p>Waste Management & Recycling Operations</p>
-</header>
+<div class="layout">
 
-<div class="container">
-
-    <div class="cards">
-        <div class="card">
-            <h3>Total Waste Collected</h3>
-            <h2>12,540 KG</h2>
+    <aside class="sidebar">
+        <div class="logo">
+            ♻ WasteWise
         </div>
 
-        <div class="card">
-            <h3>Active Vehicles</h3>
-            <h2>18</h2>
-        </div>
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Operations</a>
+            <a href="#">Fleet</a>
+            <a href="#">Monitoring</a>
+            <a href="#">Database</a>
+            <a href="#">AWS Resources</a>
+        </nav>
+    </aside>
 
-        <div class="card">
-            <h3>Regions Covered</h3>
-            <h2>6</h2>
-        </div>
+    <main class="content">
 
-        <div class="card">
-            <h3>Today's Collections</h3>
-            <h2>124</h2>
-        </div>
-    </div>
+        <header>
+            <h1>WasteWise Operations Dashboard</h1>
+            <p>Waste Management & Recycling Operations Platform</p>
+        </header>
 
-    <div class="chart-container">
-        <h2>Waste Collection Analytics</h2>
-        <canvas id="wasteChart"></canvas>
-    </div>
+        <section class="cards">
 
-    <div class="tables">
+            <div class="card">
+                <span>Total Waste</span>
+                <h2>12,540 KG</h2>
+                <small>+12% this month</small>
+            </div>
 
-        <div class="table-box">
-            <h2>Vehicle Status</h2>
-            <table>
-                <tr>
-                    <th>Vehicle ID</th>
-                    <th>Region</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>TRK-101</td>
-                    <td>North</td>
-                    <td>Active</td>
-                </tr>
-                <tr>
-                    <td>TRK-102</td>
-                    <td>East</td>
-                    <td>Active</td>
-                </tr>
-                <tr>
-                    <td>TRK-103</td>
-                    <td>West</td>
-                    <td>Maintenance</td>
-                </tr>
-            </table>
-        </div>
+            <div class="card">
+                <span>Active Vehicles</span>
+                <h2>18</h2>
+                <small>98.4% uptime</small>
+            </div>
 
-        <div class="table-box">
-            <h2>AWS Infrastructure Status</h2>
-            <table>
-                <tr>
-                    <th>Service</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>EC2 Instance</td>
-                    <td>🟢 Running</td>
-                </tr>
-                <tr>
-                    <td>Docker</td>
-                    <td>🟢 Active</td>
-                </tr>
-                <tr>
-                    <td>RDS MySQL</td>
-                    <td>🟢 Connected</td>
-                </tr>
-                <tr>
-                    <td>CloudWatch</td>
-                    <td>🟢 Monitoring</td>
-                </tr>
-            </table>
-        </div>
+            <div class="card">
+                <span>Regions Covered</span>
+                <h2>6</h2>
+                <small>All operational</small>
+            </div>
 
-    </div>
+            <div class="card">
+                <span>Collections Today</span>
+                <h2>124</h2>
+                <small>Live updates</small>
+            </div>
+
+        </section>
+
+        <section class="charts">
+
+            <div class="chart-card">
+                <h3>Weekly Collection Trend</h3>
+                <canvas id="lineChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3>Waste Distribution</h3>
+                <canvas id="pieChart"></canvas>
+            </div>
+
+        </section>
+
+        <section class="monitoring">
+
+            <h2>Infrastructure Monitoring</h2>
+
+            <div class="monitor-grid">
+
+                <div class="monitor-card">
+                    <span>CPU Usage</span>
+                    <h3>0%</h3>
+                </div>
+
+                <div class="monitor-card">
+                    <span>Memory Available</span>
+                    <h3>1582 MB</h3>
+                </div>
+
+                <div class="monitor-card">
+                    <span>Disk Usage</span>
+                    <h3>15%</h3>
+                </div>
+
+                <div class="monitor-card">
+                    <span>Docker Containers</span>
+                    <h3>3 Running</h3>
+                </div>
+
+                <div class="monitor-card">
+                    <span>CloudWatch</span>
+                    <h3>Active</h3>
+                </div>
+
+                <div class="monitor-card">
+                    <span>RDS</span>
+                    <h3>Connected</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="tables">
+
+            <div class="table-card">
+
+                <h2>Fleet Status</h2>
+
+                <table>
+
+                    <tr>
+                        <th>Vehicle</th>
+                        <th>Region</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <tr>
+                        <td>TRK-101</td>
+                        <td>North</td>
+                        <td>Active</td>
+                    </tr>
+
+                    <tr>
+                        <td>TRK-102</td>
+                        <td>East</td>
+                        <td>Active</td>
+                    </tr>
+
+                    <tr>
+                        <td>TRK-103</td>
+                        <td>West</td>
+                        <td>Maintenance</td>
+                    </tr>
+
+                    <tr>
+                        <td>TRK-104</td>
+                        <td>South</td>
+                        <td>Active</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <div class="table-card">
+
+                <h2>AWS Services</h2>
+
+                <table>
+
+                    <tr>
+                        <th>Service</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <tr>
+                        <td>EC2 Instance</td>
+                        <td>Running</td>
+                    </tr>
+
+                    <tr>
+                        <td>Docker</td>
+                        <td>Active</td>
+                    </tr>
+
+                    <tr>
+                        <td>RDS MySQL</td>
+                        <td>Connected</td>
+                    </tr>
+
+                    <tr>
+                        <td>CloudWatch</td>
+                        <td>Monitoring</td>
+                    </tr>
+
+                    <tr>
+                        <td>Cron Jobs</td>
+                        <td>Scheduled</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <footer>
+            WasteWise Waste Management Cloud • AWS EC2 • Docker • RDS • CloudWatch • Linux Automation
+        </footer>
+
+    </main>
 
 </div>
 
